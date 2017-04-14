@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-    <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Exos javascript</title>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="jquery.js">  </script>
 
-    </head>
-    <body>
+    <title>Jquery Exercice minmaj music</title>
+  </head>
+  <body>
+    <audio id="Psycho" preload="auto" src="./Psycho.mp3"></audio>
+          <audio id="Schubert" preload="auto" src="./Schuber.mp3"></audio>
 
-      <!-- <form action="#" method="post"> -->
-      <P>
-      <label for="prenom">Prénom :</label>
-                <input type="text" id="prenom"/><br>
-        </p>
-        <p>
-      <label for="age" >Age : </label>
-                <input type=number id="age"/><br>
-      <input type="submit" value="Envoyer" onclick="Age()"/>
-      </P>
-      <audio id="player"  type="audio/mpeg" />
+       <label for="nom"/>Quel est votre nom</label><br>
+          <input type="text" id="nom"/><br>
 
-      </audio>
-      <p id="reponse">
+              <label for="age">Quel est votre age? </label><br>
+          <input type="number" id="age"/><br>
+       <button id="confirm">Confirm</button>
 
-      </p>
+   <p id="reponse"></p>
+   <!-- <form><imput type="date" value= "votre age"> -->
+<script>
 
-<script type="text/javascript" src="bonjour.js">
+$("#confirm").click(function(){
 
-</script>
+             var Name = $("#nom").val();
+             var Age = $("#age").val();
+             var texte = ("bonjour " + Name + "!");
 
-    </body>
+            // $("#reponse").innerHTML = texte;//la fonction jquery pour inserer du texte dans une div
+            $( "#reponse" ).append( texte );
+
+  var player = document.querySelector((age<18) ? "#Schubert" : "#Psycho");
+  player.play();
+});
+
+
+  </script>
+  </body>
 </html>
